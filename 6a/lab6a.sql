@@ -1,6 +1,6 @@
 SELECT name FROM movies WHERE `year`=1995;
 SELECT COUNT(role) FROM roles JOIN movies ON movies.id=roles.movie_id WHERE movies.name="Lost in Translation";
-	SELECT role FROM roles JOIN movies ON movies.id=roles.movie_id WHERE movies.name="Lost in Translation";
+	SELECT first_name, last_name FROM actors JOIN roles ON roles.actor_id=actors.id JOIN movies ON movies.id=roles.movie_id WHERE movies.name="Lost in Translation";
 	SELECT first_name, last_name FROM directors 
 																						JOIN movies_directors ON directors.id=movies_directors.director_id 
 																						JOIN movies ON movies.id=movies_directors.movie_id 
